@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const fechaActual = new Date();
+
+        const mesActual = fechaActual.getMonth();
+
+        let cuatrimestre;
+
+        if (mesActual >= 0 && mesActual <= 2) {
+        cuatrimestre = "Primer cuatrimestre (Enero - Marzo)";
+        } else if (mesActual >= 3 && mesActual <= 5) {
+        cuatrimestre = "Segundo cuatrimestre (Abril - Junio)";
+        } else if (mesActual >= 6 && mesActual <= 8) {
+        cuatrimestre = "Tercer cuatrimestre (Julio - Septiembre)";
+        } else {
+        cuatrimestre = "Cuarto cuatrimestre (Octubre - Diciembre)";
+        }
+
+        document.write(` Nos encontramos en el ${ cuatrimestre}`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

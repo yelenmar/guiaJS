@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traductor Español-Inglés</title>
+    <script>
+        function traducirPalabra() {
+            var palabra = document.getElementById("palabra").value.toLowerCase();
+            var resultado = document.getElementById("resultado");
+
+            switch (palabra) {
+                case "casa":
+                    resultado.textContent = "La traducción al inglés es: house";
+                    break;
+                case "mesa":
+                    resultado.textContent = "La traducción al inglés es: table";
+                    break;
+                case "perro":
+                    resultado.textContent = "La traducción al inglés es: dog";
+                    break;
+                case "gato":
+                    resultado.textContent = "La traducción al inglés es: cat";
+                    break;
+                default:
+                    resultado.textContent = "La palabra ingresada no se encuentra en el conjunto de palabras disponibles.";
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Traductor Español-Inglés</h1>
+    <p>Palabras disponibles: casa, mesa, perro, gato</p>
+
+    <form id="traduccionForm">
+        <label for="palabra">Ingresa una palabra en español:</label>
+        <input type="text" id="palabra" required>
+        <button type="button" onclick="traducirPalabra()">Traducir</button>
+    </form>
+
+    <p id="resultado"></p>
+
+</body>
+</html>

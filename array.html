@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sumarVectores(vector1, vector2) {
+        if (vector1.length !== vector2.length) {
+            document.write("Los vectores deben tener la misma longitud.");
+            return null;
+        }
+
+        const resultado = [];
+
+        for (let i = 0; i < vector1.length; i++) {
+            resultado.push(vector1[i] + vector2[i]);
+        }
+
+        return resultado;
+        }
+
+        const longitud = parseInt(prompt("Ingrese la longitud de los vectores:"));
+
+    
+        const vectorA = [];
+        const vectorB = [];
+
+       
+        document.write("Ingrese los valores para el primer vector:");
+        for (let i = 0; i < longitud; i++) {
+        vectorA.push(parseFloat(prompt(`Ingrese el valor ${i + 1}:`)));
+        }
+
+        document.write("Ingrese los valores para el segundo vector:");
+        for (let i = 0; i < longitud; i++) {
+        vectorB.push(parseFloat(prompt(`Ingrese el valor ${i + 1}:`)));
+        }
+
+        const resultadoVector = sumarVectores(vectorA, vectorB);
+
+        if (resultadoVector) {
+        document.write("Resultado de la suma de los vectores:", resultadoVector);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

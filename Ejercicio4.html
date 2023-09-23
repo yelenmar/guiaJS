@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ejercicio 4</title>
+    </style>
+    <script>
+        function verificarNavidad() {
+            var dia = parseInt(document.getElementById("dia").value);
+            var mes = parseInt(document.getElementById("mes").value);
+
+            var diaNavidad = 25;
+            var mesNavidad = 12;
+
+            var resultado = document.getElementById("resultado");
+
+            if (dia === diaNavidad && mes === mesNavidad) {
+                resultado.textContent = "La fecha ingresada es Navidad.";
+            } else {
+                resultado.textContent = "La fecha ingresada no es Navidad.";
+            }
+        }
+    </script>
+</head>
+<body style="background-color:pink;  text-align: center;">
+    <h1>Verificar si es Navidad</h1>
+
+    <form id="fechaForm">
+        <label for="dia">Día (1-31):</label>
+        <input type="number" id="dia" min="1" max="31" required><br>
+
+        <label for="mes">Mes (1-12):</label>
+        <input type="number" id="mes" min="1" max="12" required><br>
+
+        <label for="año">Año:</label>
+        <input type="number" id="año" required><br>
+
+        <button type="button" onclick="verificarNavidad()">Verificar</button>
+    </form>
+
+    <p id="resultado"></p>
+</body>
+</html>

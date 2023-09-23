@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcularPromedio() {
+            const num1 = parseInt(prompt("Ingrese el primer número entero:"));
+            const num2 = parseInt(prompt("Ingrese el segundo número entero:"));
+            const num3 = parseInt(prompt("Ingrese el tercer número entero:"));
+
+            // Verificar si las entradas son números válidos
+            if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+                return "Por favor, ingrese números enteros válidos.";
+            }
+            const promedio = (num1 + num2 + num3) / 3;
+
+            return promedio;
+        }
+        const resultado = calcularPromedio();
+        document.write("El promedio es:", resultado);
+    </script>
+</head>
+<body></body>
+</html>
